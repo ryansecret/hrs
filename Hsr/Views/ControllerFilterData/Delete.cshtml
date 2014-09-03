@@ -1,0 +1,44 @@
+@model Hsr.Models.ControllerFilterData
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>删除</h2>
+
+<h3>确定删除当前所选?</h3>
+<fieldset>
+    <legend>ControllerFilterData</legend>
+
+    <div class="display-label">@Html.LabelFor(model => model.ModuleName)</div>
+    <div class="display-field">@Model.ModuleName</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.MethodeName)</div>
+    <div class="display-field">@Model.MethodeName</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.OperationTime)</div>
+    <div class="display-field">@String.Format("{0:g}", Model.OperationTime)</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.Description)</div>
+    <div class="display-field">@Model.Description</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.UserID)</div>
+    <div class="display-field">@Model.UserID</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.OperateType)</div>
+    <div class="display-field">@Model.OperateType</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.ParamsJsonStr)</div>
+    <div class="display-field">@Model.ParamsJsonStr</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.Test)</div>
+    <div class="display-field">@(Model.Test == null ? "None" : Model.Test.Name)</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("退回", "Index")
+    </p>
+}
+
+

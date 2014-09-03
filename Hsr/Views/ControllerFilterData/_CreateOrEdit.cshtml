@@ -1,0 +1,72 @@
+﻿@using System.Web.Mvc.Html
+@using Hsr.Core.HtmlEx
+@model Hsr.Models.ControllerFilterData
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelForEx(model => model.ModuleName,null,":")
+</div>
+<div class="">
+    @Html.EditorFor(model => model.ModuleName)  @Html.ValidationMessageFor(model => model.ModuleName)
+    @Html.RequiredHint()
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.MethodeName)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.MethodeName)
+    @Html.ValidationMessageFor(model => model.MethodeName)
+    @Html.RequiredHint()
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.OperationTime)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.OperationTime)
+    @Html.ValidationMessageFor(model => model.OperationTime)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Description)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Description)
+    @Html.ValidationMessageFor(model => model.Description)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.UserID)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.UserID)
+    @Html.ValidationMessageFor(model => model.UserID)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.OperateType)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.OperateType)
+    @Html.ValidationMessageFor(model => model.OperateType)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ParamsJsonStr)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.ParamsJsonStr)
+    @Html.ValidationMessageFor(model => model.ParamsJsonStr)
+</div>
+
+ 
+<div class="editor-field">
+   @* @Html.DropDownListFor(model => model.TestId, ((IEnumerable<Hsr.Models.Test>)ViewBag.PossibleTest).Select(option => new SelectListItem {
+        Text = (option == null ? "None" : option.Name), 
+        Value = option.ControlleId.ToString(),
+        Selected = (Model != null) && (option.ControlleId == Model.TestId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.TestId)*@
+</div>

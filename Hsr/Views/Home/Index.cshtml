@@ -1,0 +1,195 @@
+﻿@{
+    ViewBag.Title = "主页";
+}
+@section featured {
+  
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                若要了解有关 ASP.NET MVC 的详细信息，请访问
+                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>。
+                该页提供 <mark>视频、教程和示例</mark> 以帮助你充分利用 ASP.NET MVC。
+                如果你对 ASP.NET MVC 有任何疑问，请访问
+                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">我们的论坛</a>。
+            </p>
+            <a href=#  class="hint--top" data-hint="Yeah, I am >:D" style="width:100px;z-index:0">Ls</a>
+            <input type="button"   data-hint="Yeah, I am >:D" class="hint--top btn  .btn--negative" style="width:100px;z-index:0"/>
+            <a   class="btn .btn--positive"  style="width:100px;z-index:0">Log in to play</a>
+            <a href=# class="btn .btn--primary  btn--large  btn--beta" id="test">Log in to play</a>
+        </div>
+        
+        <div id="dialog-message" title="Download complete">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    Your files have downloaded successfully into the My Downloads folder.
+  </p>
+  <p>
+    Currently using <b>36% of your storage space</b>.
+  </p>
+</div>
+    </section>
+}
+<div id="jstree">
+    
+    <ul>
+        <li>Root node 1
+            <ul>
+                <li id="child_node_1">Child node 1</li>
+                <li>Child node 2</li>
+            </ul>
+        </li>
+        <li>Root node 2</li>
+    </ul>
+</div>
+<button class="btn .btn--negative" id="demo">demo button</button>
+<div id="jstree1" >
+							<ul>
+								<li>Root node 1
+									<ul>
+										<li data-jstree='{ "selected" : true }'><a href="#"><em>initially</em> <strong>selected</strong></a></li>
+										<li data-jstree='{ "icon" : "http://jstree.com/tree-icon.png" }'>custom icon URL</li>
+										<li data-jstree='{ "opened" : true }'>initially open
+											<ul>
+												<li>Another node</li>
+											</ul>
+										</li>
+										<li data-jstree='{ "icon" : "glyphicon glyphicon-leaf" }'>Custom icon class (bootstrap)</li>
+									</ul>
+								</li>
+								<li><a href="http://www.jstree.com">Root node 2</a></li>
+							</ul>
+						</div>
+<div class="col w5">
+								<div class="content">
+									<div class="box">
+										<div class="head"><div></div></div>
+										<h2>Simple box with title</h2>
+										<div class="desc">
+											<p>
+												&lt;div class=&quot;box&quot;&gt;<br />
+													&lt;div class=&quot;head&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;<br />
+													&lt;h2&gt;Here is the header&lt;/h2&gt;<br />
+													&lt;div class=&quot;desc&quot;&gt;<br />
+														&lt;p&gt;Text&lt;/p&gt;<br />
+													&lt;/div&gt;<br />
+													&lt;div class=&quot;bottom&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;<br />
+												&lt;/div&gt;
+											</p>
+										</div>
+										<div class="bottom"><div></div></div>
+									</div>
+								</div>
+							</div>
+<div class="col w5 last" id="message">
+    <div class="content">
+        <div class="box header">
+            <div class="head"><div></div></div>
+            <h2>Simple box with header</h2>
+            <div class="desc">
+                <p>
+                    &lt;div class=&quot;box header&quot;&gt;<br />
+                    &lt;div class=&quot;head&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;<br />
+                    &lt;h2&gt;Here is the header&lt;/h2&gt;<br />
+                    &lt;div class=&quot;desc&quot;&gt;<br />
+                    &lt;p&gt;Text&lt;/p&gt;<br />
+                    &lt;/div&gt;<br />
+                    &lt;div class=&quot;bottom&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;<br />
+                    &lt;/div&gt;
+                </p>
+            </div>
+            <div class="bottom"><div></div></div>
+        </div>
+    </div>							
+</div>
+ 
+<div id="testMessage">messge test</div>
+<input type="checkbox"  name="first_checkbox" checked="checked">
+<div>
+    <p>
+    <label>Checkbox:</label>
+    <input type="checkbox" class="checkbox" name="first_checkbox" checked="checked" />
+      
+</p>
+</div>
+
+
+											
+<h3>下面是我们的建议:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>开始使用</h5>
+        ASP.NET MVC 为你提供了一种用于生成动态网站的方式，
+        该方式基于模式，十分强大，使你可以清晰地分离各种考虑因素，让你能够完全控制标记，
+        以便进行灵活而有趣的开发。ASP.NET MVC 包括许多功能，你可以使用这些功能进行
+        TDD 友好的快速开发，以创建使用
+        最新 Web 标准的复杂应用程序。
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">了解详细信息...</a>
+    </li>
+
+    <li class="two">
+        <h5>添加 NuGet 程序包并快速开始编码</h5>
+        通过 NuGet，可以轻松地安装和更新免费的库和工具。
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">了解详细信息...</a>
+    </li>
+
+    <li class="three">
+        <h5>查找 Web 宿主</h5>
+        你可以轻松找到所提供的功能和价格
+        都适合你应用程序的 Web 宿主公司。
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">了解详细信息...</a>
+    </li>
+</ol>
+@section scripts
+{
+    @Styles.Render("~/Content/jstree")
+    @Scripts.Render("~/bundles/jstree")
+    @*   <script>
+        $(function () {
+            
+    $( "#dialog-message").dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
+  </script>*@
+    <script>
+        $(function () {
+            
+            
+            // 6 create an instance when the DOM is ready
+            $('input.checkbox').customcheckbox();
+            $('#jstree').jstree({
+                "core": {
+                    "themes": {
+                        "variant": "large"
+                    }
+                },
+                "checkbox": {
+                    "keep_selected_style": false
+                },
+                "plugins": ["wholerow", "checkbox"]
+            });
+            $('#jstree1').jstree();
+            // 7 bind to events triggered on the tree
+            $('#jstree').on("changed.jstree", function(e, data) {
+                console.log(data.selected);
+            });
+            // 8 interact with the tree - either way is OK
+            $('#demo').on('click', function () {
+                $('#demo').Message({ type: 'error', time: 4000, text: "Some text", target: "#testMessage", click: true });
+                $('#jstree').jstree(true).select_node('child_node_1');
+                $('#jstree1').jstree(true).select_node('child_node_1');
+                $('#jstree').jstree('select_node', 'child_node_1');
+                $.jstree.reference('#jstree').select_node('child_node_1');
+            });
+        });
+    </script>
+}

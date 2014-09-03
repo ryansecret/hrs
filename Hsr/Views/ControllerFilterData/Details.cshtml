@@ -1,0 +1,41 @@
+@model Hsr.Models.ControllerFilterData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>明细</h2>
+
+<fieldset>
+    <legend>ControllerFilterData</legend>
+
+    <div class="display-label">@Html.LabelFor(model => model.ModuleName)</div>
+    <div class="display-field">@Model.ModuleName</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.MethodeName)</div>
+    <div class="display-field">@Model.MethodeName</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.OperationTime)</div>
+    <div class="display-field">@String.Format("{0:g}", Model.OperationTime)</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.Description)</div>
+    <div class="display-field">@Model.Description</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.UserID)</div>
+    <div class="display-field">@Model.UserID</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.OperateType)</div>
+    <div class="display-field">@Model.OperateType</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.ParamsJsonStr)</div>
+    <div class="display-field">@Model.ParamsJsonStr</div>
+
+    <div class="display-label">@Html.LabelFor(model => model.Test)</div>
+    <div class="display-field">@(Model.Test == null ? "None" : Model.Test.Name)</div>
+</fieldset>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id=Model.MsgId }) |
+    @Html.ActionLink("返回", "Index")
+</p>
+
+

@@ -1,0 +1,51 @@
+﻿@using System.Collections
+@using Hsr.Core.HtmlEx
+@using Hsr.Models
+@model Hsr.Models.ControllerFilterData
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+   
+    <legend>ControllerFilterData</legend>
+    <div>
+        <input type="radio" id="ssd" style="width:5em"/>
+    <label for="ssd">sdf</label>
+    </div>
+    <input type="color"/>
+     <input type="date"/>
+    <select>
+        <option ></option>
+        <option ></option>
+        <option ></option>
+    </select>
+    <input id="search" type="url" list="searchlist" required />
+    <datalist id="searchlist">
+        <option value="http://www.google.com" label="Google" />
+        <option value="http://www.yahoo.com" label="Yahoo" />
+        <option value="http://www.bing.com" label="Bing" />
+    </datalist>
+    
+    
+        @Html.RadioButtonListFor(d=>d.MethodeName,(SelectList)ViewBag.PossibleTest,null)
+        
+        @Html.DatePickerDropDowns("天","月","年")
+  <fieldset>
+        @Html.DropDownListFor(d=>d.MethodeName,(SelectList)ViewBag.PossibleTest,"xuanze")
+        @Html.HiddenFor(model => model.MsgId)
+		@Html.Partial("_CreateOrEdit", Model)
+
+        <p>
+            <input type="submit" value="保存" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("返回", "Index")
+</div>

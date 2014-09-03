@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Hsr 应用程序</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Styles.Render("~/Content/themes/base/css")
+        @Styles.Render("/Content/hint")
+        @StackExchange.Profiling.MiniProfiler.RenderIncludes()
+         
+    </head>
+    <body>
+        <header>
+            <ul id="nav" style="z-index:1500">
+               
+                <li><a href="#"><img src="images/home.png" /> Home</a></li>
+                <li><a href="#"><span><img src="images/top1.png" /> HTML/CSS</span></a>
+                    <div class="subs">
+                        <div class="col">
+                            <ul>
+                                <li><a href="#"><img src="images/bub.png" /> Link 1</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 2</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 3</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 4</a></li>
+                                <li><a href="#"><span><img src="images/top3.png" /> Sublinks</span></a>
+                                    <div class="subs">
+                                        <div class="col">
+                                            <ul>
+                                                <li><a href="#"><img src="images/bub.png" /> Link 41</a></li>
+                                                <li><a href="#"><img src="images/bub.png" /> Link 42</a></li>
+                                                <li><a href="#"><img src="images/bub.png" /> Link 43</a></li>
+                                                <li><a href="#"><img src="images/bub.png" /> Link 44</a></li>
+                                                <li><a href="#"><img src="images/bub.png" /> Link 45</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul>
+                                                <li><a href="#"><img src="images/bub.png" /> Link 46</a></li>
+                                                <li><a href="#"><img src="images/bub.png" /> Link 47</a></li>
+                                                <li><a href="#"><img src="images/bub.png" /> Link 48</a></li>
+                                                <li><a href="#"><img src="images/bub.png" /> Link 49</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li><a href="#"><img src="images/bub.png" /> Link 6</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 7</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 8</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 9</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 10</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#"><span><img src="images/top2.png" /> jQuery/JS</span></a>
+                    <div class="subs">
+                        <div class="col">
+                            <ul>
+                                <li><a href="#"><img src="images/bub.png" /> Link 1</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 2</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 3</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 4</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 5</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li><a href="#"><img src="images/bub.png" /> Link 6</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 7</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 8</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 9</a></li>
+                                <li><a href="#"><img src="images/bub.png" /> Link 10</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#"><img src="images/top3.png" /> PHP</a></li>
+                <li><a href="#"><img src="images/top4.png" /> MySQL</a></li>
+                <li><a href="#"><img src="images/top5.png" /> XSLT</a></li>
+            </ul>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("徽标放置在此处", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("主页", "Index", "Home")
+                            
+                            <li>@Html.ActionLink("关于", "About", "Home")</li>
+                            <li>@Html.ActionLink("联系我们", "Contact", "Home")</li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - 我的 ASP.NET MVC 应用程序</p>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+
+        @RenderSection("scripts", required: false)
+ 
+    </body>
+</html>

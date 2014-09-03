@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Hsr.Models.ControllerFilterData>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>列表</h2>
+
+<p>
+    @Html.ActionLink("新建", "Create")
+    
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            @Html.LabelFor(model => model.First().ModuleName)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.First().MethodeName)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.First().OperationTime)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.First().Description)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.First().UserID)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.First().OperateType)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.First().ParamsJsonStr)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.First().Test)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(@"编辑", "Edit", new { id=item.MsgId }) |
+            @Html.ActionLink(@"详细", "Details", new { id=item.MsgId }) |
+            @Html.ActionLink(@"删除", "Delete", new { id=item.MsgId })
+        </td>
+        <td>
+			@item.ModuleName
+        </td>
+        <td>
+			@item.MethodeName
+        </td>
+        <td>
+			@String.Format("{0:g}", item.OperationTime)
+        </td>
+        <td>
+			@item.Description
+        </td>
+        <td>
+			@item.UserID
+        </td>
+        <td>
+			@item.OperateType
+        </td>
+        <td>
+			@item.ParamsJsonStr
+        </td>
+        <td>
+			@(item.Test == null ? "None" : item.Test.Name)
+        </td>
+    </tr>
+}
+
+</table>
+
+
